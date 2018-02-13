@@ -6,15 +6,38 @@
 
 
 /* Flexbox container */
-
+.flexbox-container {
+    min-height: 200px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
 /* Each column in the flexbox */
-
+.flex-column {
+    padding: 20px;
+    flex-basis: 100%;
+}
 
 /* Content within each flexbox item */
-
+.content {
+    background-color: tomato;
+    text-align: center;
+    font-size: 4rem;
+    height: 100%;
+}
 
 /* On medium screens, have each item take up 50% */
-
+@media (min-width: 768px) {
+    .flex-column {
+        flex-basis: 50%;
+    }
+}
 
 /* On larger screens, have each item take up 25% */
+@media (min-width: 992px) {
+    .flex-column {
+        flex-basis: 25%;
+    }
+}

@@ -4,13 +4,30 @@
 // Class Puppy
 class Puppy {
     // Constructor: takes in an img url, and a sound
+    constructor(img="http://cdn3-www.dogtime.com/assets/uploads/gallery/german-shepherd-puppies/german-shepherd-puppy-10.jpg", sound="bark") {
+        this.img = img;
+        this.sound = sound;
+    }
 
+    bark() {
+        responsiveVoice.speak(this.sound);
+    }
     // Method for "speaking" using responsiveVoice
-
+    render() {
+        let puppyCard = $('<div>');
+        puppyCard.css('background-image', `url(${this.img})`);
+        puppyCard.attr('class', 'puppyCard col-sm-4');
+        return puppyCard;
+    }
     // Render a Div that you can click on to bark
 
 }
 
+let myPuppy = new Puppy('http://cdn3-www.dogtime.com/assets/uploads/gallery/german-shepherd-puppies/german-shepherd-puppy-10.jpg', 'woof');
+$('body').append(myPuppy.render());
+// letmy myOtherPuppy = new Puppy('', 'yip yip');
+// myPuppy.bark();
+// myOtherPuppy.bark();
 
 // Class Form
 class PuppyForm {

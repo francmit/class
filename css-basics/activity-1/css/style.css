@@ -3,7 +3,11 @@
     - Set the box-sizing to include the borders on elements 
     - Align elements in the center of the body
 */
-
+body {
+    margin: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
 
 /* On all `div` elements, set the following properties:
     - Set a 1 pixel solid blue border
@@ -13,4 +17,11 @@
     - Set the padding to 20 pixels
     - Set the margin-top to 45% of the vertical height
 */
-
+div {
+    border: 20px solid blue;
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 45vh;
+}
